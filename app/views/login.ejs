@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+
+</head>
+
+<body>
+
+    <div class="box-wrap">
+        <div class="box">
+            <div class="logo">
+                <img src="images/logoPng.png" alt="">
+            </div>
+            <p style="color:red; margin-top: -19px; display: none" id="incorrectCredentials">Usuário ou Senha Inválidos
+            </p>
+            <form id="form_login" method="post" action="/users/auth" style="display: inline; text-align: center;">
+                <input class="login-input" type="text" name="username" id="username" required placeholder="Usuário"
+                    style="margin: 20px; margin-top: 10px; width:78%">
+                <input class="login-input" type="password" name="password" id="password" required placeholder="Senha"
+                    style="margin: 20px;  margin-top: 10px; width:78%">
+                <button type="submit" class="bt bt-login" id="btLogin">Entrar</button>
+            </form>
+
+        </div>
+    </div>
+
+    
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+    function showHidden() {
+
+        $("#incorrectCredentials").show()
+    }
+    $("#btLogin").click(e =>{
+        setTimeout(function(){
+            showHidden()
+        }, 800)
+        
+    })
+
+
+
+
+</script>
+
+</html>
